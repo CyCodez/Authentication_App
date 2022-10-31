@@ -1,0 +1,119 @@
+.App {
+  text-align: center;
+}
+
+.container {
+  background-color: green;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  /* line-height: 50px; */
+}
+
+.Navigate {
+  background-color: rgb(191, 191, 15);
+  color: black;
+  margin: 25px;
+  padding: 10px;
+  text-decoration: none;
+}
+.Navigate:hover {
+  background: rgb(168, 168, 8);
+}
+.nested {
+  color: yellow;
+  font-size: 40px;
+}
+.invalid {
+  color: rgb(149, 12, 12);
+  font-weight: bold;
+}
+.input_user {
+  margin: 10px;
+  padding: 6px;
+}
+.dashboard {
+  width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  height: auto;
+  border: 2px solid #fafafa;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0.325rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+.greeting {
+  margin-left: 20px;
+  color: #272727af;
+}
+pre {
+  color: rgb(132, 17, 17);
+}
+.wallet {
+  height: 150px;
+  width: 300px;
+  background-color: #04836a;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+}
+
+.wallet_balance {
+  font-size: 25px;
+  font-weight: bold;
+  color: #010c1b;
+  margin-bottom: 5px;
+}
+
+.wallet_balance-amount {
+  color: #fafafa;
+}
+.greeting {
+  margin-left: 20px;
+  color: #272727af;
+}
+#form_1 {
+  width: 300px;
+  margin: 0 auto;
+}
+#number-div {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+#amount-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+#amount {
+  border-radius: 5px;
+  padding: 7px;
+}
+.recharge {
+  color: yellow;
+  margin: 4px;
+}
+.error_msg {
+  color: rgb(118, 3, 3);
+}
+
+h1 {
+  padding: 3px;
+  margin-bottom: -3px;
+}
+.avatar-div {
+  margin: 15px;
+  padding: 10px;
+  border: 2px solid white;
+}
