@@ -51,6 +51,9 @@
   border: 2px solid yellow;
   background-color: rgb(137, 137, 10);
   margin-top: 8%;
+  padding-left: 10px;
+  padding-right: 15px;
+  margin: 15px;
 }
 
 @media only screen and (max-device-width: 480px) {
