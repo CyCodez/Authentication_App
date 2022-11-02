@@ -30,9 +30,7 @@ const App = () => {
           <Intro />
           <Routes>
             <Route index element={<Home />} />
-            <Route path="home" element={<Home />}>
-              <Route path="nested" element={<MyNest />} />
-            </Route>
+            <Route path="home" element={<Home />} />
 
             <Route
               path="dashboard"
@@ -41,7 +39,9 @@ const App = () => {
                   <Dashboard />
                 </ProtectedRoute>
               }
-            />
+            >
+              <Route path="nested" element={<MyNest />} />
+            </Route>
 
             <Route
               path="history"
