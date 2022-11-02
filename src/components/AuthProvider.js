@@ -32,7 +32,10 @@ const AuthProvider = ({ children }) => {
 
   const Form_Btn = (e) => {
     e.preventDefault();
-
+    if (isNaN(state.amount)) {
+      dispatch({ type: "NUM" });
+      return;
+    }
     if (state.amount > state.dash) {
       dispatch({ type: "INSUFFICIENT" });
       return;

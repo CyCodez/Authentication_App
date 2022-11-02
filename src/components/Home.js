@@ -1,6 +1,7 @@
 import { useAuth } from "../App";
 import { Outlet } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const { handleLogin, name, handleChange, text } = useAuth();
@@ -28,6 +29,9 @@ const Home = () => {
       </button>
       <span className="invalid">{text}</span>
       <Outlet />
+      <Link className="nested_route" to="nested">
+        Nested
+      </Link>
     </>
   );
 };

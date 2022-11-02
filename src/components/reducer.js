@@ -42,6 +42,12 @@ const Reducer = (state, action) => {
       token: null,
     };
   }
+  if (action.type === "NUM") {
+    return {
+      ...state,
+      funds: "Amount Must Be a Number",
+    };
+  }
 };
 
 export default Reducer;
