@@ -1,5 +1,6 @@
 import { useAuth } from "../App";
 import { Helmet } from "react-helmet-async";
+import { Outlet, Link } from "react-router-dom";
 
 const History = () => {
   const { name, VALUES, TOKEN } = useAuth();
@@ -47,6 +48,10 @@ const History = () => {
           </div>
         );
       })}
+      <Outlet />
+      <Link className="nested_route" to="nested">
+        Nested
+      </Link>
     </div>
   );
 };

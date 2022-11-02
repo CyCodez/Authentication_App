@@ -36,6 +36,10 @@ const AuthProvider = ({ children }) => {
       dispatch({ type: "NUM" });
       return;
     }
+    if (state.amount === "") {
+      dispatch({ type: "EMPTY_STRING" });
+      return;
+    }
     if (state.amount > state.dash) {
       dispatch({ type: "INSUFFICIENT" });
       return;
@@ -53,9 +57,6 @@ const AuthProvider = ({ children }) => {
         mynetwork: state.network,
       };
       dispatch({ type: "SUFFICIENT", payload: suffix });
-    }
-    if (state.amount === "") {
-      dispatch({ type: "EMPTY_STRING" });
     }
   };
 

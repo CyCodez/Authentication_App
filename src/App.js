@@ -39,10 +39,7 @@ const App = () => {
                   <Dashboard />
                 </ProtectedRoute>
               }
-            >
-              <Route path="nested" element={<MyNest />} />
-            </Route>
-
+            />
             <Route
               path="history"
               element={
@@ -50,8 +47,9 @@ const App = () => {
                   <History />
                 </ProtectedRoute>
               }
-            />
-
+            >
+              <Route path="nested" element={<MyNest />} />
+            </Route>
             <Route path="*" element={<NoMatch />} />
           </Routes>
         </AuthProvider>

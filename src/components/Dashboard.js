@@ -1,6 +1,5 @@
 import { useAuth } from "../App";
 import { Helmet } from "react-helmet-async";
-import { Outlet, Link } from "react-router-dom";
 const Dashboard = () => {
   const {
     TOKEN,
@@ -86,10 +85,6 @@ const Dashboard = () => {
           </form>
         </div>
       </div>
-      <Outlet />
-      <Link className="nested_route" to="nested">
-        Nested
-      </Link>
     </>
   );
 };
