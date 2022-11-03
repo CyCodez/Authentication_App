@@ -1,5 +1,1 @@
 https://bank-recharge.netlify.app/
-https://bank-recharge.netlify.app/home
-https://bank-recharge.netlify.app/dashboard
-https://bank-recharge.netlify.app/history
-https://bank-recharge.netlify.app/nested
