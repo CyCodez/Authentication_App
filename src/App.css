@@ -1,18 +1,27 @@
+:root {
+  --green: green;
+  --white: #ffffff;
+  --deepyellow: rgb(152, 152, 16);
+  --hoveryellow: rgb(121, 121, 17);
+  --lightyellow: rgb(191, 191, 15);
+  --lighteryellow: yellow;
+}
+
 .App {
   text-align: center;
 }
 body {
-  background-color: green;
+  background-color: var(--green);
 }
 .container {
-  background-color: green;
+  background-color: var(--green);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--white);
 }
 .bing {
   text-align: center;
@@ -21,17 +30,17 @@ body {
   text-align: center;
 }
 .sign-in {
-  margin-top: 4%;
+  margin-top: 1%;
   padding: 1%;
   font-size: 15px;
-  background-color: rgb(152, 152, 16);
+  background-color: var(--deepyellow);
   color: white;
 }
 .sign-in:hover {
-  background-color: rgb(121, 121, 17);
+  background-color: var(--hoveryellow);
 }
 .Navigate {
-  background-color: rgb(191, 191, 15);
+  background-color: var(--lightyellow);
   color: black;
   margin: 25px;
   padding: 10px;
@@ -41,7 +50,7 @@ body {
   background: rgb(168, 168, 8);
 }
 .nested {
-  color: yellow;
+  color: var(--lighteryellow);
   font-size: 40px;
 }
 .invalid {
@@ -52,10 +61,13 @@ body {
   margin: 10px;
   padding: 6px;
 }
+.Bank {
+  text-align: center;
+}
 .dashboard {
   width: 400px;
   margin: 50px auto;
-  padding: 30px;
+  padding: 3px;
   height: auto;
   border: 2px solid #fafafa;
   border-radius: 10px;
@@ -65,42 +77,41 @@ body {
 .nested_route {
   color: white;
   text-decoration: none;
-  border: 2px solid yellow;
-  background-color: rgb(137, 137, 10);
+  border: 2px solid var(--lighteryellow);
+  background-color: var(--deepyellow);
   margin-top: 8%;
   padding-left: 10px;
   padding-right: 15px;
   margin: 15px;
 }
 
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-device-width: 380px) {
   .dashboard {
     margin-bottom: -100px;
     width: 100%;
-    background-color: green;
+    background-color: var(--green);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: white;
+    color: var(--white);
   }
   nav {
-    margin-bottom: -100px;
+    height: -1000px;
     width: 100%;
-    background-color: green;
-    min-height: 100vh;
+    background-color: var(--green);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
-    margin-bottom: -250px;
+    margin: 0 auto;
   }
   .container {
-    background-color: green;
+    background-color: var(--green);
     min-height: 100vh;
     width: 480px;
     display: flex;
@@ -108,7 +119,9 @@ body {
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: white;
+    color: var(--white);
+    width: 100%;
+    margin: 0 auto;
   }
 }
 .greeting {
@@ -166,8 +179,9 @@ pre {
   padding: 7px;
 }
 .recharge {
-  color: yellow;
+  color: var(--lighteryellow);
   margin: 4px;
+  text-align: center;
 }
 .error_msg {
   color: rgb(118, 3, 3);

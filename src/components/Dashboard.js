@@ -24,7 +24,7 @@ const Dashboard = () => {
         <link rel="canonical" href="/dashboard" />
       </Helmet>
       <h2>Dashboard (Protected)</h2>
-      <h2>Welcome To Your Dashboard {name.toUpperCase()}</h2>
+      <h2 className="authen">Welcome To Your Dashboard {name.toUpperCase()}</h2>
       <div className="authen">Authenticated as {TOKEN}</div>
 
       <div className="dashboard_container">
