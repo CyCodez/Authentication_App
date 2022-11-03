@@ -1,7 +1,9 @@
 .App {
   text-align: center;
 }
-
+body {
+  background-color: green;
+}
 .container {
   background-color: green;
   min-height: 100vh;
@@ -12,7 +14,22 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+.bing {
+  text-align: center;
+}
+.authen {
+  text-align: center;
+}
+.sign-in {
+  margin-top: 4%;
+  padding: 2%;
+  font-size: 15px;
+  background-color: rgb(152, 152, 16);
+  color: white;
+}
+.sign-in:hover {
+  background-color: rgb(121, 121, 17);
+}
 .Navigate {
   background-color: rgb(191, 191, 15);
   color: black;
@@ -57,9 +74,9 @@
 }
 
 @media only screen and (max-device-width: 480px) {
-  nav,
   .dashboard {
     margin-bottom: -100px;
+    width: 100%;
     background-color: green;
     min-height: 100vh;
     display: flex;
@@ -68,6 +85,19 @@
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
+  }
+  nav {
+    margin-bottom: -100px;
+    width: 100%;
+    background-color: green;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    margin-bottom: -250px;
   }
   .container {
     background-color: green;

@@ -15,7 +15,7 @@ const Home = () => {
         <link rel="canonical" href="/" />
       </Helmet>
       <h2 className="recharge">Recharge From Your Bank Account</h2>
-      <h2>To Begin, You Must Sign in with your UserName:</h2>
+      <h2 className="bing">To Begin, You Must Sign in with your UserName:</h2>
       <input
         type="text"
         className="input_user"

@@ -25,7 +25,7 @@ const Dashboard = () => {
       </Helmet>
       <h2>Dashboard (Protected)</h2>
       <h2>Welcome To Your Dashboard {name.toUpperCase()}</h2>
-      <div>Authenticated as {TOKEN}</div>
+      <div className="authen">Authenticated as {TOKEN}</div>
 
       <div className="dashboard_container">
         <div className="dashboard">
@@ -79,7 +79,7 @@ const Dashboard = () => {
               </div>
             </div>
             <p className="error_msg">{FUNDS}</p>
-            <button type="submit" className="form_btn" onClick={Form_Btn}>
+            <button type="submit" className="sign-in" onClick={Form_Btn}>
               Buy
             </button>
           </form>

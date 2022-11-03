@@ -52,6 +52,11 @@ const History = () => {
       <Link className="nested_route" to="nested">
         Nested
       </Link>
+      <span>
+        <Link className="nested_route" to="error">
+          404
+        </Link>
+      </span>
     </div>
   );
 };
