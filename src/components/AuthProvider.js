@@ -44,7 +44,7 @@ const AuthProvider = ({ children }) => {
       dispatch({ type: "NUM" });
       return;
     }
-    if (state.network === "select") {
+    if (state.network === "" || state.network === "select") {
       dispatch({ type: "NET" });
       return;
     }
