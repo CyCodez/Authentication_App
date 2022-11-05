@@ -1,52 +1,63 @@
 //Provides the Required response to a specific action and condition
 const Reducer = (state, action) => {
-  if (action.type === "handle_Input") {
-    return {
-      ...state,
-      [action.field]: action.payload,
-    };
-  }
-  if (action.type === "INSUFFICIENT") {
-    return {
-      ...state,
-      funds: "Insufficient Balance",
-    };
-  }
-  if (action.type === "SUFFICIENT") {
-    const newPeople = [...state.values, action.payload];
-    return {
-      ...state,
-      funds: " ",
-      values: newPeople,
-      dash: state.dash - state.amount,
-      amount: "",
-      phone: "",
-      network: "",
-    };
-  }
-  if (action.type === "EMPTY_STRING") {
-    return {
-      ...state,
-      funds: "please enter a value",
-    };
-  }
-  if (action.type === "Token") {
-    return {
-      ...state,
-      token: action.tok,
-    };
-  }
-  if (action.type === "LOGOUT") {
-    return {
-      ...state,
-      token: null,
-    };
-  }
-  if (action.type === "NUM") {
-    return {
-      ...state,
-      funds: "Amount Must Be a Number",
-    };
+  switch (action.type) {
+    case "handle_Input":
+      return {
+        ...state,
+        [action.field]: action.payload,
+      };
+    case "INSUFFICIENT":
+      return {
+        ...state,
+        funds: "Insufficient Balance",
+      };
+    case "SUFFICIENT":
+      const newPeople = [...state.values, action.payload];
+      return {
+        ...state,
+        funds: " ",
+        values: newPeople,
+        dash: state.dash - state.amount,
+        amount: "",
+        phone: "",
+        network: "",
+      };
+    case "EMPTY_STRING":
+      return {
+        ...state,
+        funds: "Please Enter An Amount",
+      };
+    case "Token":
+      return {
+        ...state,
+        token: action.tok,
+      };
+    case "LOGOUT":
+      return {
+        ...state,
+        token: null,
+        amount: "",
+        phone: "",
+        network: "",
+        funds: "",
+      };
+    case "NUM":
+      return {
+        ...state,
+        funds: "Amount Must Be a Number",
+      };
+    case "NET":
+      return {
+        ...state,
+        funds: "Please Select a Network",
+      };
+    case "NONUMBER":
+      return {
+        ...state,
+        funds: "Please Input Number to Recharge",
+      };
+    default:
+      return state;
   }
 };
 

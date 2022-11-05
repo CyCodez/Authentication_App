@@ -52,12 +52,11 @@ const Dashboard = () => {
             </div>
             <div>
               <div id="number-div">
-                <label labelfor="tel-input">Phone Number</label>
+                <label labelfor="amount-div">Phone Number</label>
                 <input
                   value={PHONE}
                   onChange={handle_Input}
-                  id="tel-input"
-                  className="word"
+                  id="amount"
                   type="tel"
                   pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,7}$"
                   placeholder="0809 365 0288"
@@ -67,15 +66,13 @@ const Dashboard = () => {
               </div>
               <div id="amount-div">
                 <label labelfor="amount">Specify Network</label>
-                <input
-                  value={NETWORK}
-                  onChange={handle_Input}
-                  name="network"
-                  id="amount"
-                  type="text"
-                  placeholder="Network"
-                  required
-                />
+                <select value={NETWORK} onChange={handle_Input} name="network">
+                  <option value="select">select</option>
+                  <option value="MTN">MTN</option>
+                  <option value="AIRTEL">AIRTEL</option>
+                  <option value="GLO">GLO</option>
+                  <option value="ETISALAT">ETISALAT</option>
+                </select>
               </div>
             </div>
             <p className="error_msg">{FUNDS}</p>

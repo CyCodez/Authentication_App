@@ -32,16 +32,24 @@ const AuthProvider = ({ children }) => {
 
   const Form_Btn = (e) => {
     e.preventDefault();
-    if (isNaN(state.amount)) {
-      dispatch({ type: "NUM" });
-      return;
-    }
     if (state.amount === "") {
       dispatch({ type: "EMPTY_STRING" });
       return;
     }
     if (state.amount > state.dash) {
       dispatch({ type: "INSUFFICIENT" });
+      return;
+    }
+    if (isNaN(state.amount)) {
+      dispatch({ type: "NUM" });
+      return;
+    }
+    if (state.network === "select") {
+      dispatch({ type: "NET" });
+      return;
+    }
+    if (state.phone === "") {
+      dispatch({ type: "NONUMBER" });
       return;
     } else {
       const date = new Date();
