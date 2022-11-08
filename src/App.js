@@ -2,6 +2,7 @@ import React, { createContext, useContext } from "react";
 import "./App.css";
 import {
   Home,
+  About,
   Dashboard,
   History,
   Navigation,
@@ -31,6 +32,14 @@ const App = () => {
           <Routes>
             <Route index element={<Home />} />
             <Route path="home" element={<Home />} />
+            <Route
+              path="/about"
+              element={
+                <ProtectedRoute>
+                  <About />
+                </ProtectedRoute>
+              }
+            />
 
             <Route
               path="dashboard"

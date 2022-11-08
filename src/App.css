@@ -191,6 +191,10 @@ h1 {
   padding: 3px;
   margin-bottom: -3px;
 }
+h4,
+h2 {
+  text-align: center;
+}
 .avatar-div {
   margin: 15px;
   padding: 10px;

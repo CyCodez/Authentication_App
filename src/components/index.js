@@ -8,3 +8,4 @@ export { default as ErrorFallback } from "./ErrorFallback";
 export { default as ProtectedRoute } from "./ProtectedRoute";
 export { default as AuthProvider } from "./AuthProvider";
 export { default as Intro } from "./Intro";
+export { default as About } from "./About";

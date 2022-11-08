@@ -19,6 +19,15 @@ const Navigation = () => {
           isActive ? { color: "white" } : { color: "black" }
         }
         className="Navigate"
+        to="/about"
+      >
+        About
+      </NavLink>
+      <NavLink
+        style={({ isActive }) =>
+          isActive ? { color: "white" } : { color: "black" }
+        }
+        className="Navigate"
         to="/dashboard"
       >
         Dashboard
