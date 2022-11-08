@@ -49,7 +49,7 @@ function About() {
       </li>
 
       <li>
-        <h4>HAPPY BANKING!!!</h4>
+        <h2>HAPPY BANKING!!!</h2>
       </li>
     </div>
   );
