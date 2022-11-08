@@ -34,7 +34,7 @@ const History = () => {
           height="150px"
         />
       </p>
-      <p>Your Athentication code is {TOKEN}</p>
+      <p>Your Athentication Code Is: {TOKEN}</p>
       {console.log(VALUES)}
       {VALUES.map((vals) => {
         console.log(vals);

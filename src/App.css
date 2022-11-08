@@ -28,6 +28,7 @@ body {
 }
 .authen {
   text-align: center;
+  font-size: larger;
 }
 .sign-in {
   margin-top: 1%;
@@ -134,7 +135,7 @@ pre {
 .wallet {
   height: 150px;
   width: 300px;
-  background-color: #04836a;
+  background-color: #074136;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -142,20 +143,18 @@ pre {
   align-items: center;
   margin: 10px auto;
 }
-
 .wallet_balance {
   font-size: 25px;
   font-weight: bold;
-  color: #010c1b;
+  color: var(--lightyellow);
   margin-bottom: 5px;
 }
-
 .wallet_balance-amount {
   color: #fafafa;
 }
 .greeting {
   margin-left: 20px;
-  color: #272727af;
+  color: var(--lighteryellow);
 }
 #form_1 {
   width: 300px;
