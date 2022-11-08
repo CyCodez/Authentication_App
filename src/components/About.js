@@ -1,6 +1,16 @@
+import { Helmet } from "react-helmet-async";
+
 function About() {
   return (
     <div>
+      <Helmet>
+        <title>About</title>
+        <meta
+          name="description"
+          content="Give Detailed Description Of The Application"
+        />
+        <link rel="canonical" href="/About" />
+      </Helmet>
       <ul>
         <li>
           {" "}
