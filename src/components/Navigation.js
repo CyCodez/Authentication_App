@@ -30,7 +30,16 @@ const Navigation = () => {
         className="Navigate"
         to="/dashboard"
       >
-        Dashboard
+        Airtime
+      </NavLink>
+      <NavLink
+        style={({ isActive }) =>
+          isActive ? { color: "white" } : { color: "black" }
+        }
+        className="Navigate"
+        to="/dashboards"
+      >
+        Transfer
       </NavLink>
       <NavLink
         style={({ isActive }) =>

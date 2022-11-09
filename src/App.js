@@ -4,6 +4,7 @@ import {
   Home,
   About,
   Dashboard,
+  Transfer,
   History,
   Navigation,
   NoMatch,
@@ -46,6 +47,14 @@ const App = () => {
               element={
                 <ProtectedRoute>
                   <Dashboard />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="dashboards"
+              element={
+                <ProtectedRoute>
+                  <Transfer />
                 </ProtectedRoute>
               }
             />

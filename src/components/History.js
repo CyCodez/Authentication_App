@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { Outlet, Link } from "react-router-dom";
 
 const History = () => {
-  const { name, VALUES, TOKEN } = useAuth();
+  const { name, ACC_VALUES, TOKEN, VALUES } = useAuth();
   return (
     <div className="dashboard">
       <Helmet>
@@ -35,11 +35,26 @@ const History = () => {
         />
       </p>
       <p>Your Athentication Code Is: {TOKEN}</p>
-      {console.log(VALUES)}
+      {console.log(ACC_VALUES)}
+      {ACC_VALUES.map((vals) => {
+        console.log(vals);
+        return (
+          <div className="avatar-div" key={vals.id}>
+            <h4>TRANSFER</h4>
+            <p>Amount Transferred: &#8358;{vals.myAmount_account}</p>
+            <p>Bank Name: {vals.myaccount_name}</p>
+            <p>Acccount Number: {vals.myaccount_number}</p>
+            <p>Account Balance: &#8358;{vals.balance}</p>
+            <p>Account Type: {vals.myaccount_type}</p>
+            <p>Time: {vals.time}</p>
+          </div>
+        );
+      })}
       {VALUES.map((vals) => {
         console.log(vals);
         return (
           <div className="avatar-div" key={vals.id}>
+            <h4>AIRTIME RECHARGE</h4>
             <p>Amount Recharged: &#8358;{vals.myAmount}</p>
             <p>Phone: {vals.myphone}</p>
             <p>Network: {vals.mynetwork.toUpperCase()}</p>

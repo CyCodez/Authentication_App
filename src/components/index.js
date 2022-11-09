@@ -1,4 +1,5 @@
 export { default as Dashboard } from "./Dashboard";
+export { default as Transfer } from "./Transfer";
 export { default as Home } from "./Home";
 export { default as History } from "./History";
 export { default as Navigation } from "./Navigation";

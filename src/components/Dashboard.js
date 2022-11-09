@@ -31,7 +31,7 @@ const Dashboard = () => {
         <div className="dashboard">
           <h3 className="greeting">Buy Airtime</h3>
           <div className="wallet">
-            <p className="wallet_balance">Wallet Balance</p>
+            <p className="wallet_balance">Account Balance</p>
             <h2 className="wallet_balance-amount">
               &#8358;<span className="myspan">{DASH}</span>
               <span>.00</span>
