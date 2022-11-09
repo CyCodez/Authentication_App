@@ -4,6 +4,8 @@ import { Helmet } from "react-helmet-async";
 const Home = () => {
   const { handleLogin, name, handleChange, text } = useAuth();
 
+  window.scrollTo(300, 1000);
+
   return (
     <>
       <Helmet>
