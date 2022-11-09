@@ -12,6 +12,7 @@
 }
 body {
   background-color: var(--green);
+  font-family: Sofia;
 }
 .container {
   background-color: var(--green);
