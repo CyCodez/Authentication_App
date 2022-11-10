@@ -57,7 +57,7 @@ const Reducer = (state, action) => {
     case "EMPTY_STRING_ACCOUNT":
       return {
         ...state,
-        funds: "Please Enter An Account Number",
+        funds: "Please Enter An Amount To Transfer",
       };
     case "Token":
       return {

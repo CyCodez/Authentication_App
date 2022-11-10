@@ -12,7 +12,6 @@ const Dashboard = () => {
     DASH,
     handle_Input,
   } = useAuth();
-
   return (
     <>
       <Helmet>
