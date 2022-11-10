@@ -19,7 +19,7 @@ function About() {
             This Is An Application Which Helps Users Perform Transactions
             Directly From Their Bank Account, It Provides An Extra Layer Of
             Security Where The User Is Reqiured To Enter A Valid Name In Other
-            To Perform A Transaction.
+            To Perform A Transaction Or Access Any Of The Routes.
           </h4>
         </li>
       </ul>
