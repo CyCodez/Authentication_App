@@ -49,6 +49,7 @@ const Dashboards = () => {
                 id="amount"
                 type="tel"
                 placeholder="&#8358;0.00"
+                autocomplete="off"
                 required
               />
             </div>
@@ -78,6 +79,7 @@ const Dashboards = () => {
                   type="tel"
                   placeholder="46239 01724 **** ****26"
                   name="account_number"
+                  autocomplete="off"
                   required
                 />
               </div>
@@ -102,6 +104,7 @@ const Dashboards = () => {
                   type="text"
                   placeholder="enter access token"
                   name="access"
+                  autocomplete="off"
                   required
                 />
               </div>
