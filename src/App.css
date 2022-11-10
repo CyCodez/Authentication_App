@@ -51,6 +51,12 @@ body {
 .Navigate:hover {
   background: rgb(168, 168, 8);
 }
+.EP {
+  font-size: 80px;
+}
+.EI {
+  border-radius: 15px;
+}
 .nested {
   color: var(--lighteryellow);
   font-size: 40px;
