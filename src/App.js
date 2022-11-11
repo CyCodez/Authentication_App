@@ -51,7 +51,7 @@ const App = () => {
               }
             />
             <Route
-              path="dashboards"
+              path="Transfer"
               element={
                 <ProtectedRoute>
                   <Transfer />

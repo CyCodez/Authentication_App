@@ -37,7 +37,7 @@ const Navigation = () => {
           isActive ? { color: "white" } : { color: "black" }
         }
         className="Navigate"
-        to="/dashboards"
+        to="/Transfer"
       >
         Transfer
       </NavLink>

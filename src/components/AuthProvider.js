@@ -156,9 +156,10 @@ const AuthProvider = ({ children }) => {
 
     dispatch({ type: "Token", tok: toker });
     // setToken(toker);
-    const origin = location.state?.from?.pathname || "/dashboard";
+    const origin = location.state?.from?.pathname || "/About";
     navigate(origin);
-    navigate("/dashboard");
+    navigate("/About");
+    setName("");
   };
 
   const handleLogout = () => {
