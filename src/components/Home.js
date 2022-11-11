@@ -1,9 +1,13 @@
 import { useAuth } from "../App";
 import { Helmet } from "react-helmet-async";
+import { useEffect, useRef } from "react";
 
 const Home = () => {
   const { handleLogin, name, handleChange, text } = useAuth();
-
+  const myuseref = useRef(null);
+  useEffect(() => {
+    myuseref.current.focus();
+  }, []);
   window.scrollTo(300, 1000);
 
   return (
@@ -19,6 +23,7 @@ const Home = () => {
       <h2 className="recharge">Recharge From Your Bank Account</h2>
       <h2 className="bing">To Begin, You Must Sign in with your UserName:</h2>
       <input
+        ref={myuseref}
         type="text"
         className="input_user"
         value={name}
