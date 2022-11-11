@@ -155,11 +155,9 @@ const AuthProvider = ({ children }) => {
     const toker = await fakeAuth();
 
     dispatch({ type: "Token", tok: toker });
-    // setToken(toker);
     const origin = location.state?.from?.pathname || "/About";
     navigate(origin);
     navigate("/About");
-    setName("");
   };
 
   const handleLogout = () => {
