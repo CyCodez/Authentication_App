@@ -1,4 +1,5 @@
 import { useAuth } from "../App";
+import { useRef, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 const Dashboards = () => {
   const {
@@ -14,7 +15,10 @@ const Dashboards = () => {
     handle_Account_Input,
     Form_Acc_Btn,
   } = useAuth();
-
+  const myuseref = useRef(null);
+  useEffect(() => {
+    myuseref.current.focus();
+  }, []);
   return (
     <>
       <Helmet>
@@ -43,6 +47,7 @@ const Dashboards = () => {
             <div id="amount-div">
               <label labelfor="amount">Amount</label>
               <input
+                ref={myuseref}
                 value={ACC_AMOUNT}
                 name="account_amount"
                 onChange={handle_Account_Input}
