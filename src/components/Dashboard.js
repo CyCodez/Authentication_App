@@ -52,7 +52,7 @@ const Dashboard = () => {
                 id="amount"
                 type="tel"
                 placeholder="&#8358;0.00"
-                autocomplete="off"
+                autoComplete="off"
                 required
               />
             </div>
@@ -67,7 +67,7 @@ const Dashboard = () => {
                   pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,7}$"
                   placeholder="0809 365 0288"
                   name="phone"
-                  autocomplete="off"
+                  autoComplete="off"
                   required
                 />
               </div>

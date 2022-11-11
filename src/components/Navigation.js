@@ -2,7 +2,7 @@
 import { NavLink } from "react-router-dom";
 import { useAuth } from "../App";
 const Navigation = () => {
-  const { onLogout, TOKEN } = useAuth();
+  const { onLogout, TOKEN, name } = useAuth();
   return (
     <nav>
       <NavLink
@@ -11,6 +11,9 @@ const Navigation = () => {
         }
         className="Navigate"
         to="/home"
+        onClick={() => {
+          name = "";
+        }}
       >
         Home
       </NavLink>
