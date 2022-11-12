@@ -19,6 +19,21 @@ const Dashboards = () => {
   useEffect(() => {
     myuseref.current.focus();
   }, []);
+  const Successfun = () => {
+    return (
+      <>
+        <p>
+          {FUNDS}{" "}
+          <img
+            src="https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes-3/3/31-512.png"
+            alt=""
+            width="30px"
+            height="30px"
+          />
+        </p>
+      </>
+    );
+  };
   return (
     <>
       <Helmet>
@@ -119,7 +134,7 @@ const Dashboards = () => {
                 FUNDS === "Transfer Successful" ? "success" : "error_msg"
               }
             >
-              {FUNDS}
+              {FUNDS === "Transfer Successful" ? <Successfun /> : FUNDS}
             </p>
             <button type="submit" className="sign-in" onClick={Form_Acc_Btn}>
               Transfer

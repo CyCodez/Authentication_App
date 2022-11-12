@@ -41,6 +41,15 @@ const History = () => {
         return (
           <div className="avatar-div" key={vals.id}>
             <h4>TRANSFER</h4>
+            <p>
+              status: <span className="success">successful </span>
+              <img
+                src="https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes-3/3/31-512.png"
+                alt=""
+                width="30px"
+                height="30px"
+              />
+            </p>
             <p>Amount Transferred: &#8358;{vals.myAmount_account}</p>
             <p>Bank Name: {vals.myaccount_name}</p>
             <p>Acccount Number: {vals.myaccount_number}</p>
@@ -55,6 +64,15 @@ const History = () => {
         return (
           <div className="avatar-div" key={vals.id}>
             <h4>AIRTIME RECHARGE</h4>
+            <p>
+              status: <span className="success">successful </span>
+              <img
+                src="https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes-3/3/31-512.png"
+                alt=""
+                width="30px"
+                height="30px"
+              />
+            </p>
             <p>Amount Recharged: &#8358;{vals.myAmount}</p>
             <p>Phone: {vals.myphone}</p>
             <p>Network: {vals.mynetwork.toUpperCase()}</p>
