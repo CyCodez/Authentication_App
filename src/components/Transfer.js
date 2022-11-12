@@ -114,7 +114,13 @@ const Dashboards = () => {
                 />
               </div>
             </div>
-            <p className="error_msg">{FUNDS}</p>
+            <p
+              className={
+                FUNDS === "Transfer Successful" ? "success" : "error_msg"
+              }
+            >
+              {FUNDS}
+            </p>
             <button type="submit" className="sign-in" onClick={Form_Acc_Btn}>
               Transfer
             </button>

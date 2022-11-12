@@ -14,7 +14,12 @@ const Reducer = (state, action) => {
     case "INSUFFICIENT":
       return {
         ...state,
-        funds: "Insufficient Balance",
+        fund: "Insufficient Balance",
+      };
+    case "INVALID_PHONE":
+      return {
+        ...state,
+        fund: "Invalid Phone Number",
       };
     case "INVALID":
       return {
@@ -30,7 +35,7 @@ const Reducer = (state, action) => {
       const newPeople = [...state.values, action.payload];
       return {
         ...state,
-        funds: " ",
+        fund: "Recharge Successful",
         values: newPeople,
         dash: state.dash - state.amount,
         amount: "",
@@ -41,7 +46,7 @@ const Reducer = (state, action) => {
       const newPeoples = [...state.account_values, action.payload];
       return {
         ...state,
-        funds: " ",
+        funds: "Transfer Successful",
         account_values: newPeoples,
         dash: state.dash - state.account_amount,
         account_amount: "",
@@ -52,7 +57,7 @@ const Reducer = (state, action) => {
     case "EMPTY_STRING":
       return {
         ...state,
-        funds: "Please Enter An Amount",
+        fund: "Please Enter An Amount",
       };
     case "EMPTY_STRING_ACCOUNT":
       return {
@@ -72,21 +77,27 @@ const Reducer = (state, action) => {
         phone: "",
         network: "",
         funds: "",
+        fund: "",
       };
     case "NUM":
       return {
         ...state,
-        funds: "Amount Must Be a Number",
+        fund: "Invalid Amount",
       };
     case "NUM_ACCOUNT":
       return {
         ...state,
         funds: "Amount Must Be a Number",
       };
+    case "INVALIDACNUMBER":
+      return {
+        ...state,
+        funds: "Invalid Account Number",
+      };
     case "NET":
       return {
         ...state,
-        funds: "Please Select a Network",
+        fund: "Please Select a Network",
       };
     case "NET_ACCOUNT":
       return {
@@ -101,7 +112,7 @@ const Reducer = (state, action) => {
     case "NONUMBER":
       return {
         ...state,
-        funds: "Please Input Number to Recharge",
+        fund: "Please Input Number to Recharge",
       };
     case "NOINVALID":
       return {

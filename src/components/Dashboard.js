@@ -5,7 +5,7 @@ const Dashboard = () => {
   const {
     TOKEN,
     name,
-    FUNDS,
+    FUND,
     Form_Btn,
     PHONE,
     NETWORK,
@@ -82,7 +82,14 @@ const Dashboard = () => {
                 </select>
               </div>
             </div>
-            <p className="error_msg">{FUNDS}</p>
+            <p
+              className={
+                FUND === "Recharge Successful" ? "success" : "error_msg"
+              }
+            >
+              {FUND}
+            </p>
+
             <button type="submit" className="sign-in" onClick={Form_Btn}>
               Buy
             </button>

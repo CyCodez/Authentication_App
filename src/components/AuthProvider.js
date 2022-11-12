@@ -12,6 +12,7 @@ const AuthProvider = ({ children }) => {
   const initialState = {
     token: null,
     funds: "",
+    fund: "",
     amount: "",
     phone: "",
     network: "",
@@ -34,6 +35,10 @@ const AuthProvider = ({ children }) => {
       field: e.target.name,
       payload: e.target.value,
     });
+    if (state.amount !== " ") {
+      state.fund = " ";
+      state.success = " ";
+    }
   };
 
   const handle_Account_Input = (e) => {
@@ -43,6 +48,9 @@ const AuthProvider = ({ children }) => {
       field: e.target.name,
       payload: e.target.value,
     });
+    if (state.account_amount !== " ") {
+      state.funds = "";
+    }
   };
 
   const Form_Btn = (e) => {
@@ -59,8 +67,13 @@ const AuthProvider = ({ children }) => {
       dispatch({ type: "NUM" });
       return;
     }
+
     if (state.network === "" || state.network === "select") {
       dispatch({ type: "NET" });
+      return;
+    }
+    if (isNaN(state.phone)) {
+      dispatch({ type: "INVALID_PHONE" });
       return;
     }
     if (state.phone === "") {
@@ -95,6 +108,10 @@ const AuthProvider = ({ children }) => {
     }
     if (isNaN(state.account_amount)) {
       dispatch({ type: "NUM_ACCOUNT" });
+      return;
+    }
+    if (isNaN(state.account_number)) {
+      dispatch({ type: "INVALIDACNUMBER" });
       return;
     }
     if (state.account_type === "" || state.account_type === "select") {
@@ -176,6 +193,7 @@ const AuthProvider = ({ children }) => {
     text,
     setText,
     FUNDS: state.funds,
+    FUND: state.fund,
     AMOUNT: state.amount,
     PHONE: state.phone,
     NETWORK: state.network,

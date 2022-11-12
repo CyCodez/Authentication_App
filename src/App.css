@@ -206,7 +206,9 @@ pre {
 .error_msg {
   color: rgb(118, 3, 3);
 }
-
+.success {
+  color: greenyellow;
+}
 h1 {
   padding: 3px;
   margin-bottom: -3px;
