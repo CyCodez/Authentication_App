@@ -119,6 +119,16 @@ const Reducer = (state, action) => {
         ...state,
         funds: "Enter Access Token",
       };
+    case "INCOMPLETE":
+      return {
+        ...state,
+        fund: "Invalid Phone Number",
+      };
+    case "LOW":
+      return {
+        ...state,
+        fund: "Recharge Must Be From #50 And Above",
+      };
     case "NONUMBER_ACCOUNT":
       return {
         ...state,

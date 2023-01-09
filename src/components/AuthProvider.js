@@ -55,6 +55,9 @@ const AuthProvider = ({ children }) => {
 
   const Form_Btn = (e) => {
     e.preventDefault();
+    let res = ["080", "090", "070", "081"].some((word) =>
+      state.phone.startsWith(word)
+    );
     if (state.amount === "") {
       dispatch({ type: "EMPTY_STRING" });
       return;
@@ -74,6 +77,14 @@ const AuthProvider = ({ children }) => {
     }
     if (isNaN(state.phone)) {
       dispatch({ type: "INVALID_PHONE" });
+      return;
+    }
+    if (state.phone.length < 11 || !res) {
+      dispatch({ type: "INCOMPLETE" });
+      return;
+    }
+    if (state.amount < 50) {
+      dispatch({ type: "LOW" });
       return;
     }
     if (state.phone === "") {
